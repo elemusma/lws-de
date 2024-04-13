@@ -117,12 +117,17 @@
 			},
 			"default": [
 				{
-					"col_class": "",
+					"col_class": "col-md-6",
 					"col_style": "",
 					"col_id": "",
+					"inner_col_style": "",
+					"inner_col_class": "",
 					"img": "",
+					"img_class": "",
+					"img_style": "",
 					"title": "Column",
-					"content": "This is the column content."
+					"content": "This is the column content.",
+					"code_block": ""
 				}
 			]
 		}

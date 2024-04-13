@@ -432,6 +432,13 @@ CSF::createSection( $prefix, array(
         'type'  => 'textarea',
         'title' => 'Description about the company',
       ),
+	  
+	  // A textarea field
+      array(
+        'id'    => 'expert-witness-blurb',
+        'type'  => 'textarea',
+        'title' => 'Expert Witness And Analytic Services',
+      ),
 
 	  array(
 		'id'      => 'global-phone',
@@ -532,6 +539,11 @@ function globalPhone() {
     global $options;
     global_function(); // call the global function to set $options
     return $options['global-phone'];
+}
+function expertWitness() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['expert-witness-blurb'];
 }
 
 // Allow SVG

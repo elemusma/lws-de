@@ -23,7 +23,7 @@ export default function save( { attributes } ) {
 		<div { ...blockProps }>
 			<section
 				className={ `position-relative ${ attributes.section_class }` }
-				style={ `padding:150px 0;${ attributes.section_style }` }
+				style={ `padding:50px 0;${ attributes.section_style }` }
 				id={ attributes.section_id }
 			>
 				{ attributes.section_image && (

@@ -17,23 +17,20 @@ echo '<hr style="margin:40px auto !important;border-color:#f7f7f7;">';
 echo '<div class="container">';
 echo '<div class="row">';
 
-echo '<div class="col-lg-4 col-md-6 text-white">';
+echo '<div class="col-lg-5 col-md-6 text-white">';
 echo '<a href="' . home_url() . '">';
 echo '<div style="width:205px;fill:white;">';
 echo logoSVG();
 echo '</div>';
 echo '</a>';
 
-echo '<p class="">' . companyAbout() . '</p>';
+echo '<small class="">' . companyAbout() . '</small>';
 
 echo '</div>';
-echo '<div class="col-lg-3 col-md-6 text-white">';
-echo '<strong>Shop</strong>';
-echo '<p>';
-wp_nav_menu(array(
-    'menu' => 'Product Categories',
-    'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
-    ));
+echo '<div class="col-lg-4 col-md-6 text-white">';
+echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
+
+echo '<small class="">' . expertWitness() . '</small>';
 
 echo '</div>';
 // echo '<div class="col-lg-3 text-white">';
@@ -42,12 +39,14 @@ echo '</div>';
 
 // echo '</div>';
 echo '<div class="col-lg-3 text-white">';
-echo '<strong>Account</strong>';
+echo '<p><strong>Client Resources</strong></p>';
 echo '<p>';
 wp_nav_menu(array(
     'menu' => 'footer',
     'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
-    ));
+));
+echo '</p>';
+
 
 echo '</div>';
 

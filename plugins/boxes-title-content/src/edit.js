@@ -60,18 +60,6 @@ export default function Edit( { attributes, setAttributes } ) {
 		row_style,
 		row_class,
 		row_id,
-		col_left_style,
-		col_left_class,
-		col_left_id,
-		col_left_icon,
-		col_left_title,
-		col_left_description,
-		col_right_style,
-		col_right_class,
-		col_right_id,
-		col_right_icon,
-		col_right_title,
-		col_right_description,
 		columns,
 	} = attributes;
 
@@ -82,12 +70,17 @@ export default function Edit( { attributes, setAttributes } ) {
 			columns: [
 				...columns,
 				{
-					col_class: '',
+					col_class: 'col-md-6 d-flex align-items-stretch',
 					col_style: '',
 					col_id: '',
+					inner_col_style: '',
+					inner_col_class: '',
 					img: '',
+					img_class: 'w-100',
+					img_style: '',
 					title: 'new column',
 					content: 'new column content',
+					code_block: ''
 				},
 			],
 		} );
@@ -327,6 +320,40 @@ export default function Edit( { attributes, setAttributes } ) {
 								/>
 								</div>
 								</div>
+								<div style={{display:'flex'}}>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>Inner Column Style</p>
+								<input
+									type="text"
+									style={{width:'300px'}}
+									value={ column.inner_col_style }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'inner_col_style',
+											content.target.value
+										)
+									}
+								/>
+								
+								</div>
+								<div>
+								<p style={ { marginBottom: '0px' } }>Inner Column Class</p>
+								<input
+									type="text"
+									style={{width:'300px'}}
+									value={ column.inner_col_class }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'inner_col_class',
+											content.target.value
+										)
+									}
+								/>
+								
+								</div>
+								</div>
 								<div
 									style={ {
 										display: 'flex',
@@ -338,7 +365,7 @@ export default function Edit( { attributes, setAttributes } ) {
 											src={ column.img }
 											style={ {
 												width: '400px',
-												height: '400px',
+												height: '225px',
 												objectFit: 'cover',
 											} }
 										/>
@@ -386,9 +413,46 @@ export default function Edit( { attributes, setAttributes } ) {
 												) }
 											/>
 										</MediaUploadCheck>
+
+										<div style={{display:'flex'}}>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>Image Class</p>
+								<input
+									type="text"
+									style={{width:'175px'}}
+									value={ column.img_class }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'img_class',
+											content.target.value
+										)
+									}
+								/>
+								
+								</div>
+								<div>
+								<p style={ { marginBottom: '0px' } }>Image Style</p>
+								<input
+									type="text"
+									style={{width:'175px'}}
+									value={ column.img_style }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'img_style',
+											content.target.value
+										)
+									}
+								/>
+								
+								</div>
+								</div>
+
 									</div>
 									<div style={ { paddingLeft: '50px' } }>
 										{ /* <h2>{ column.title }</h2> */ }
+										<p style={{marginBottom:'0px'}}>Title</p>
 										<RichText
 											value={ column.title }
 											onChange={ ( content ) =>
@@ -400,17 +464,30 @@ export default function Edit( { attributes, setAttributes } ) {
 											}
 											placeholder={ __( 'Column Title' ) }
 										/>
-										<textarea
+										<p style={{marginBottom:'0px'}}>Content</p>
+										<RichText
 											value={ column.content }
 											onChange={ ( content ) =>
 												updateColumn(
 													index,
 													'content',
+													content
+												)
+											}
+											placeholder={ __( 'Column Content' ) }
+										/>
+										<textarea
+										style={{height:'200px',width:'300px'}}
+											value={ column.code_block }
+											onChange={ ( content ) =>
+												updateColumn(
+													index,
+													'code_block',
 													content.target.value
 												)
 											}
 											placeholder={ __(
-												'Column Content'
+												'Code goes here'
 											) }
 										/>
 										{ /* <RichText
@@ -427,6 +504,7 @@ export default function Edit( { attributes, setAttributes } ) {
             col_class: '',
             col_style: '',
             col_id: '',
+			inner_col_style: '',
             img: '',
             title: 'new column',
             content: 'new column content',

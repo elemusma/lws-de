@@ -45,12 +45,12 @@ wp_nav_menu(array(
 echo '</div>';
 echo '<div class="col-lg-2 col-6 text-right text-white">';
 
-echo '<small>Call Now</small><br>';
+// echo '<small>Call Now</small><br>';
 
 echo '<div class="d-flex align-items-center justify-content-end">';
 echo '<a href="tel:+1' . globalPhone() . '" class="text-white">' . globalPhone() . '</a>';
 
-echo '<div class="d-inline-block" style="width:20px;padding-left:10px;">';
+echo '<div class="d-inline-block" style="width:28px;height:28px;padding-left:10px;">';
 echo '<?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 267">
   <defs>
@@ -85,9 +85,9 @@ echo '</div>';
 echo '<div class="col-lg-3 col-md-2 col-3 desktop-hidden">';
 echo '<a id="navToggle" class="nav-toggle">';
 echo '<div>';
-echo '<div class="line-1 bg-accent-secondary"></div>';
-echo '<div class="line-2 bg-accent-secondary"></div>';
-echo '<div class="line-3 bg-accent-secondary"></div>';
+echo '<div class="line-1 bg-accent"></div>';
+echo '<div class="line-2 bg-accent"></div>';
+echo '<div class="line-3 bg-accent"></div>';
 echo '</div>';
 echo '</a>';
 echo '</div>';
