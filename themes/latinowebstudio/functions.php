@@ -54,6 +54,7 @@ function discovery_engineering_stylesheets_footer() {
 // wp_enqueue_script('jquery-min', get_theme_file_uri('/owl-carousel/jquery.min.js'));
 // wp_enqueue_script('owl-carousel', get_theme_file_uri('/owl-carousel/owl.carousel.min.js'));
 // wp_enqueue_script('owl-carousel-custom', get_theme_file_uri('/owl-carousel/owl-carousels.js'));
+
 // wp_enqueue_script('lightbox-min-js', get_theme_file_uri('/lightbox/lightbox.min.js'));
 // wp_enqueue_script('lightbox-js', get_theme_file_uri('/lightbox/lightbox.js'));
 // aos
