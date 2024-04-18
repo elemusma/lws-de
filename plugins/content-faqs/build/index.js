@@ -452,25 +452,49 @@ function save({
     id: attributes.row_id
   }, attributes.faqs.map((faq, index) => {
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: `${faq.col_class}`,
-      style: faq.col_style
+      className: `accordion position-relative ${faq.col_class}`,
+      style: `border-bottom:1px solid #D5D8DC;${faq.col_style}`
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: `${faq.inner_col_class}`,
-      style: `${faq.inner_col_style}`
-    }, faq.img && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-      src: faq.img,
-      alt: faq.title,
-      style: faq.img_style,
-      className: faq.img_class
-    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-      value: faq.title
-    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      className: "position-absolute chevron",
+      style: {}
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("svg", {
+      id: "Layer_2",
+      "data-name": "Layer 2",
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 168.38 321.74"
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("defs", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, ".cls-1.chevron-right ", {
+      strokeWidth: '0px'
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", {
+      id: "Layer_1-2",
+      "data-name": "Layer 1"
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("g", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("polygon", {
+      className: "cls-1 chevron-right",
       style: {
-        marginBottom: '0px'
+        strokeWidth: '0px'
+      },
+      points: ".5 1.17 167.65 160.87 .5 320.57 .5 1.17"
+    }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("path", {
+      className: "cls-1 chevron-right",
+      style: {
+        strokeWidth: '0px'
+      },
+      d: "M1,2.34l165.93,158.53L1,319.4V2.34M0,0v321.74l168.38-160.87L0,0h0Z"
+    }))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+      className: `button`,
+      style: {
+        cursor: 'pointer'
+      }
+    }, faq.title), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: `accordion-content`
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      className: `accordion-content-inner`
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        margin: '0px'
       }
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
       value: faq.content
-    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_2__.RawHTML, null, faq.code_block)));
+    })))));
   })))));
 }
 
@@ -566,7 +590,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-faqs","version":"0.1.0","title":"Content Faqs","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center"},"row_id":{"type":"string","default":""},"col_style":{"type":"string","default":""},"col_class":{"type":"string","default":"col-lg-6 text-center"},"col_id":{"type":"string","default":""},"faqs":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","title":"","content":""}]}},"textdomain":"content-faqs","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-faqs","version":"0.1.0","title":"Content Faqs","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center accordions"},"row_id":{"type":"string","default":""},"faqs":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","title":"","content":""}]}},"textdomain":"content-faqs","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

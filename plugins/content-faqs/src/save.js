@@ -48,20 +48,41 @@ export default function save( { attributes } ) {
 						style={ attributes.row_style }
 						id={ attributes.row_id }
 					>
-					{ attributes.faqs.map( ( faq, index ) => {
-						return (
-							<div className={ `${ faq.col_class }` } style={faq.col_style}>
-							<div className={`${faq.inner_col_class}`} style={`${faq.inner_col_style}`}>
-							{ faq.img && (
-								<img src={ faq.img } alt={ faq.title } style={faq.img_style} className={faq.img_class} />
-							) }
-								<h3><RichText.Content value={ faq.title } /></h3>
-								<p style={{marginBottom:'0px'}}><RichText.Content value={ faq.content } /></p>
-								<RawHTML>{ faq.code_block }</RawHTML>
-								</div>
-							</div>
-						);
-					} ) }
+
+{
+  attributes.faqs.map((faq, index) => {
+    return (
+        <div className={`accordion position-relative ${faq.col_class}`} style={`border-bottom:1px solid #D5D8DC;${faq.col_style}`}>
+		<div className='position-absolute chevron' style={{}}>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.38 321.74">
+  <defs>
+    <style>
+      .cls-1.chevron-right {{
+        strokeWidth: '0px'
+      }}
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <polygon className="cls-1 chevron-right" style={{strokeWidth: '0px'}} points=".5 1.17 167.65 160.87 .5 320.57 .5 1.17"/>
+      <path className="cls-1 chevron-right" style={{strokeWidth: '0px'}} d="M1,2.34l165.93,158.53L1,319.4V2.34M0,0v321.74l168.38-160.87L0,0h0Z"/>
+    </g>
+  </g>
+</svg>
+		</div>
+          <a className={`button`} style={{ cursor: 'pointer' }}>{faq.title}</a>
+          <div className={`accordion-content`}>
+            <div className={`accordion-content-inner`}>
+              <p style={{ margin: '0px' }}><RichText.Content value={faq.content} /></p>
+            </div>
+          </div>
+        </div>
+    );
+  })
+}
+
+
+
 				</div>
 				</div>
 			</section>

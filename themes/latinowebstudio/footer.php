@@ -33,22 +33,23 @@ echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
 echo '<small class="">' . expertWitness() . '</small>';
 
 echo '</div>';
+
+// // echo '<div class="col-lg-3 text-white">';
+// // echo '<strong>About</strong>';
+// // echo '<p class="">' . companyAbout() . '</p>';
+
+// // echo '</div>';
 // echo '<div class="col-lg-3 text-white">';
-// echo '<strong>About</strong>';
-// echo '<p class="">' . companyAbout() . '</p>';
+// echo '<p><strong>Client Resources</strong></p>';
+// echo '<p>';
+// wp_nav_menu(array(
+//     'menu' => 'footer',
+//     'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
+// ));
+// echo '</p>';
+
 
 // echo '</div>';
-echo '<div class="col-lg-3 text-white">';
-echo '<p><strong>Client Resources</strong></p>';
-echo '<p>';
-wp_nav_menu(array(
-    'menu' => 'footer',
-    'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
-));
-echo '</p>';
-
-
-echo '</div>';
 
 echo '</div>';
 echo '</div>';
