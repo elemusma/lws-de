@@ -52,13 +52,14 @@ export default function save( { attributes } ) {
 {
   attributes.testimonials.map((testimonial, index) => {
     return (
-        <div className={`accordion position-relative ${testimonial.col_class}`} style={`border-bottom:1px solid #D5D8DC;${testimonial.col_style}`}>
-          <a className={`button`} style={{ cursor: 'pointer' }}><RichText.Content value={testimonial.title} /></a>
-          <div className={`accordion-content`}>
-            <div className={`accordion-content-inner`}>
+        <div className={`position-relative ${testimonial.col_class}`} style={`${testimonial.col_style}`}>
+          
+          <div className={``}>
+            <div className={``}>
               <p style={{ margin: '0px' }}><RichText.Content value={testimonial.content} /></p>
             </div>
           </div>
+		  <p className={`bold`} style={{ cursor: 'pointer' }}><RichText.Content value={testimonial.title} /></p>
         </div>
     );
   })

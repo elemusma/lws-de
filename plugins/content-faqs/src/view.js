@@ -34,6 +34,7 @@ let accordions = document.querySelectorAll(".accordion");
 function toggleAccordion() {
     accordionContent = this.querySelector('.accordion-content')
     accordionContentInner = this.querySelector('.accordion-content-inner')
+    console.log(this);
 
     if (this.classList.contains('open')) {
         this.classList.remove('open')
@@ -41,14 +42,14 @@ function toggleAccordion() {
         return;
     }
 
-    accordions.forEach(function (item) {
-        item.classList.remove('open');
-    });
+    // accordions.forEach(function (item) {
+    //     item.classList.remove('open');
+    // });
 
     this.classList.add('open');
     accordionContent.style.height = `${accordionContentInner.offsetHeight}px`
 
-    console.log(accordionContentInner)
+    // console.log(accordionContentInner)
 }
 
 for (let i = 0; i < accordions.length; ++i) {

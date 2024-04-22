@@ -69,7 +69,7 @@
       },
       "default": [
         {
-          "col_class": "",
+          "col_class": "col-md-6",
           "col_style": "",
           "col_id": "",
           "name": "",
