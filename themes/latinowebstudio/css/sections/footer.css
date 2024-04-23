@@ -1,6 +1,13 @@
 footer ul.menu li {
     padding: 0;
 }
+
+#servicesMenuModal ul.menu>li>a {
+color:black;
+}
+#servicesMenuModal ul.menu>li>a:hover {
+color:var(--accent-primary);
+}
 @media only screen and (min-width: 1200px) {
     footer ul.menu li a {
         border: none;

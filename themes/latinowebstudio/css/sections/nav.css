@@ -16,6 +16,15 @@ transform-origin:center;
     pointer-events: none;
 }
 
+div#servicesMenuModal {
+    top: 91px;
+    background: none;
+}
+#servicesMenuModal .modal-content {
+    margin-top: 0;
+    height: unset;
+}
+
 ul.menu li {
     padding: 9px 0;
     position: relative;
@@ -47,7 +56,7 @@ ul.menu>li.menu-item-has-children {
 
 ul.menu>li>a {
     padding: 0px 9px;
-    color: white;
+    /* color: white; */
     text-decoration:none;
     transition:all .25s ease-in-out;
     /* font-weight: 200; */
@@ -55,6 +64,10 @@ ul.menu>li>a {
     /* font-size: 14px;
     font-family: unset; */
     cursor:pointer;
+}
+
+.text-white ul.menu>li>a {
+    color:white;
 }
 
 ul.menu>li.current-menu-item>a,ul.menu>li>a:hover,
@@ -76,12 +89,12 @@ ul.menu>li.current-menu-item>a,ul.menu>li>a:hover,
     height: 15px;
 }
 
-@media screen and (min-width:1200px) {
+/* @media screen and (min-width:1200px) {
     ul.menu li:first-child a {
         border: none;
         padding-left: 0;
     }
-}
+} */
 
 @media screen and (max-width:1199px) {
     .nav ul.menu {

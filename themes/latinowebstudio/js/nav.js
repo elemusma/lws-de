@@ -1,3 +1,58 @@
+const servicesMenuModalToggle = document.querySelector('[data-modal-id="servicesMenuModal"]');
+const servicesMenuModal = document.querySelector('#servicesMenuModal');
+const servicesMenuModalContent = document.querySelector('#servicesMenuModal .modal-content');
+const servicesMenuModalContentRow = document.querySelector('#servicesMenuModal .modal-content .row');
+let mouseEnteredSpecificElement = true;
+
+servicesMenuModalToggle.addEventListener('mouseenter', function() {
+    openServicesMenuModal();
+    mouseEnteredSpecificElement = false;
+    // console.log(mouseEnteredSpecificElement);
+    // console.log(this);
+});
+
+servicesMenuModalToggle.addEventListener('mouseleave', function() {
+    mouseEnteredSpecificElement = true;
+    // if(mouseEnteredSpecificElement) {
+    //     setTimeout(closeServicesMenuModal, 1000);
+    // }
+    setTimeout(function() {
+        if (mouseEnteredSpecificElement) {
+            // If mouseEnteredSpecificElement is still false after one second, execute the function
+            closeServicesMenuModal();
+        }
+    }, 1000); // 1000 milliseconds = 1 second
+    // console.log(mouseEnteredSpecificElement);
+    // console.log(this);
+});
+
+servicesMenuModalContent.addEventListener('mouseenter', function() {
+    mouseEnteredSpecificElement = false;
+    openServicesMenuModal();
+    // console.log(mouseEnteredSpecificElement);
+    // console.log(this);
+});
+
+servicesMenuModalContent.addEventListener('mouseleave', function() {
+    // mouseEnteredSpecificElement = true;
+    closeServicesMenuModal();
+    // setTimeout(closeServicesMenuModal, 1000);
+    // if(mouseEnteredSpecificElement) {
+    // }
+    // console.log(mouseEnteredSpecificElement);
+    // console.log(this);
+});
+
+function openServicesMenuModal() {
+    servicesMenuModal.classList.add('active');
+    servicesMenuModalContent.style.height = `${servicesMenuModalContentRow.offsetHeight}px`;
+}
+
+function closeServicesMenuModal() {
+    servicesMenuModal.classList.remove('active');
+    servicesMenuModalContent.style.height = '0px';
+}
+
 let menuHeight = document.querySelector('ul#menu-main-menu');
 let navMenu = document.querySelector('#navItems');
 let navMenuToggle = document.querySelector('#navToggle');
@@ -12,15 +67,20 @@ let logoSecondary = document.querySelector('#logo-secondary')
 window.addEventListener("scroll", parallaxEffect);
 
 function parallaxEffect() {
-    blankSpace.style.height = (((header.offsetHeight) - 1) + "px");
-    header.classList.add('position-fixed');
-    header.classList.remove('position-relative');
-
-    if (scrollY < 299) {
+    if (scrollY < 299 || scrollY === 0) {
         logoMain.style.width = "100%"
+        console.log(scrollY);
     } else if (scrollY > 300) {
         logoMain.style.width = "75%"
+        console.log(scrollY);
     }
+    setTimeout( function() {
+        blankSpace.style.height = (((header.offsetHeight) - 1) + "px");
+        servicesMenuModal.style.top =  (((header.offsetHeight) - 1) + "px");
+    }, 1000);
+    
+    header.classList.add('position-fixed');
+    header.classList.remove('position-relative');
 }
 
 // closes menu on menu item clicked, for anchor links

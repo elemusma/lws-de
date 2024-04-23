@@ -83,6 +83,35 @@ echo '<div class="text-center bg-light" style="padding:15px 0px;">';
 echo '</div>';
 echo '</footer>';
 
+echo '<div id="servicesMenuModal" class="modal" style="opacity:1;">';
+//   <!-- Modal content -->
+echo '<div class="modal-content" style="background:var(--light);border:none;width:90%;max-width: 1120px;padding:0px;height:0px;transition:all .5s ease-in-out;">';
+// echo '<span class="close">&times;</span>';
+
+echo '<div class="row" style="padding:20px;">';
+echo '<div class="col-lg-6">';
+echo '<p><strong>Forensic Electrical,Telecom, &amp; Wireless Engineering</strong></p>';
+
+wp_nav_menu(array(
+    'menu' => 'Forensic Electrical, Telecom, & Wireless Engineering',
+    'menu_class'=>'menu list-unstyled mb-0'
+));
+
+echo '</div>';
+echo '<div class="col-lg-6">';
+echo '<p><strong>Applied Research &amp; Analytics</strong></p>';
+
+wp_nav_menu(array(
+    'menu' => 'Applied Research & Analytics',
+    'menu_class'=>'menu list-unstyled mb-0'
+));
+
+echo '</div>';
+echo '</div>';
+
+echo '</div>';
+echo '</div>';
+
 echo codeFooter();
 // if(get_field('footer', 'options')) { the_field('footer', 'options'); }
 // if(get_field('footer_code')) { the_field('footer_code'); }
