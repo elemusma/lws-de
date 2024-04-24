@@ -5,8 +5,7 @@
 }
 </style>
 <?php
-$globalImg = get_field('global_placeholder_image','options');
-echo '<section class="pt-5 pb-5 position-relative bg-attachment" style="background:url('. $globalImg['url'] . ');background-size:cover;background-attachment:fixed;">';
+echo '<section class="pt-5 pb-5 position-relative bg-attachment" style="">';
 
 echo '<div class="container">';
 echo '<div class="row">';

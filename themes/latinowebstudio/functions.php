@@ -43,6 +43,7 @@ wp_enqueue_style('font-poppins', get_theme_file_uri('/font-poppins/font-poppins.
 add_action('wp_enqueue_scripts', 'discovery_engineering_stylesheets');
 // for footer
 function discovery_engineering_stylesheets_footer() {
+wp_enqueue_style('nav-mobile', get_theme_file_uri('/css/sections/nav-mobile.css'));
 // wp_enqueue_style('style-footer', get_theme_file_uri('/css/style-footer.css'));
 // owl carousel
 // wp_enqueue_style('owl.carousel.min', get_theme_file_uri('/owl-carousel/owl.carousel.min.css'));
@@ -280,11 +281,11 @@ return get_the_title();
 }
 add_shortcode('page_title', 'my_page_title_shortcode');
 
-function my_phone_number() {
-return get_field('phone','options');
-// [phone_number]
-}
-add_shortcode('phone_number', 'my_phone_number');
+// function my_phone_number() {
+// return get_field('phone','options');
+// // [phone_number]
+// }
+// add_shortcode('phone_number', 'my_phone_number');
 
 function type_writer_shortcode( $atts ) {
 	wp_enqueue_script('typewriter-js',get_theme_file_uri('/js/typewriter.js'));
@@ -447,6 +448,13 @@ CSF::createSection( $prefix, array(
 		'title'   => 'Phone',
 		'default' => '(555) 555-5555'
 	  ),
+
+	  array(
+		'id'      => 'email-address',
+		'type'    => 'text',
+		'title'   => 'Email',
+		'default' => 'info@domain.com'
+	  ),
 	  
 	  
 
@@ -540,6 +548,11 @@ function globalPhone() {
     global $options;
     global_function(); // call the global function to set $options
     return $options['global-phone'];
+}
+function emailAddress() {
+    global $options;
+    global_function(); // call the global function to set $options
+    return $options['email-address'];
 }
 function expertWitness() {
     global $options;

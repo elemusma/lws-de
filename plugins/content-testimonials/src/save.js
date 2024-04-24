@@ -52,7 +52,7 @@ export default function save( { attributes } ) {
 {
   attributes.testimonials.map((testimonial, index) => {
     return (
-        <div className={`position-relative ${testimonial.col_class}`} style={`${testimonial.col_style}`}>
+        <div className={`position-relative text-center ${testimonial.col_class}`} style={`${testimonial.col_style}`}>
           
           <div className={``}>
             <div className={``}>

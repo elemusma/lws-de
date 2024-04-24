@@ -5,8 +5,9 @@ echo '<section class="bg-accent-secondary" style="padding-top:50px;padding-botto
 echo '<div class="container">';
 echo '<div class="row justify-content-center">';
 
-echo '<div class="col-lg-6 text-center" style="">';
+echo '<div class="col-lg-9 text-center" style="">';
 echo do_shortcode('[button href="tel:+1' . globalPhone() . '" class="white"]' . globalPhone() . '[/button]');
+echo do_shortcode('[button href="/wp-content/uploads/2024/04/Mark-McFarland-CV-Not-Retained.pdf" target="_blank" class="white"]CV Download[/button]');
 echo do_shortcode('[button href="/contact/" class="white"]Contact Now[/button]');
 echo '</div>';
 echo '</div>';
@@ -17,20 +18,38 @@ echo '<hr style="margin:40px auto !important;border-color:#f7f7f7;">';
 echo '<div class="container">';
 echo '<div class="row">';
 
-echo '<div class="col-lg-5 col-md-6 text-white">';
+echo '<div class="col-lg-4 col-md-6 text-white">';
 echo '<a href="' . home_url() . '">';
 echo '<div style="width:205px;fill:white;">';
 echo logoSVG();
 echo '</div>';
 echo '</a>';
 
-echo '<small class="">' . companyAbout() . '</small>';
+echo '<p class="">' . companyAbout() . '</p>';
 
 echo '</div>';
 echo '<div class="col-lg-4 col-md-6 text-white">';
-echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
+echo '<p><strong>Forensic Electrical,Telecom, &amp; Wireless Engineering</strong></p>';
 
-echo '<small class="">' . expertWitness() . '</small>';
+wp_nav_menu(array(
+    'menu' => 'Forensic Electrical, Telecom, & Wireless Engineering',
+    'menu_class'=>'menu list-unstyled mb-0'
+));
+// echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
+
+// echo '<small class="">' . expertWitness() . '</small>';
+
+echo '</div>';
+echo '<div class="col-lg-4 col-md-6 text-white">';
+echo '<p><strong>Applied Research &amp; Analytics</strong></p>';
+
+wp_nav_menu(array(
+    'menu' => 'Applied Research & Analytics',
+    'menu_class'=>'menu list-unstyled mb-0'
+));
+// echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
+
+// echo '<small class="">' . expertWitness() . '</small>';
 
 echo '</div>';
 
@@ -85,7 +104,7 @@ echo '</footer>';
 
 echo '<div id="servicesMenuModal" class="modal" style="opacity:1;">';
 //   <!-- Modal content -->
-echo '<div class="modal-content" style="background:var(--light);border:none;width:90%;max-width: 1120px;padding:0px;height:0px;transition:all .5s ease-in-out;">';
+echo '<div class="modal-content" style="background:var(--light);border:none;width:90%;max-width: 1120px;padding:0px;height:0px;transition:all .5s ease-in-out;border-radius:0px;">';
 // echo '<span class="close">&times;</span>';
 
 echo '<div class="row" style="padding:20px;">';
@@ -111,6 +130,8 @@ echo '</div>';
 
 echo '</div>';
 echo '</div>';
+
+
 
 echo codeFooter();
 // if(get_field('footer', 'options')) { the_field('footer', 'options'); }

@@ -24,7 +24,7 @@ echo '<div class="nav">';
 echo '<div class="container">';
 echo '<div class="row">';
 
-echo '<div class="col-lg-3 col-md-4 col-3 text-center">';
+echo '<div class="col-lg-3 col-md-4 col-6 text-center">';
 
 echo '<a href="' . home_url() . '">';
 echo '<div class="" id="logo-main" style="width:100%;transition:all 1s ease-in-out;">';
@@ -54,14 +54,14 @@ echo '<a href="' . get_permalink(16) . '" class="text-white h-100 d-block d-flex
 // ));
 
 echo '</div>';
-echo '<div class="col-lg-2 col-6 text-right text-white d-flex align-items-center">';
+echo '<div class="col-lg-2 col-6 text-right text-white d-lg-flex align-items-center">';
 
 // echo '<small>Call Now</small><br>';
 
 echo '<div class="d-flex align-items-center justify-content-end">';
 echo '<a href="tel:+1' . globalPhone() . '" class="text-white">' . globalPhone() . '</a>';
 
-echo '<div class="d-inline-block" style="width:28px;height:28px;padding-left:10px;">';
+echo '<div class="d-inline-block mobile-hidden" style="width:28px;height:28px;padding-left:10px;">';
 echo '<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 267 267">
   <defs>
     <style>
@@ -88,12 +88,9 @@ echo '<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" v
 echo '</div>';
 echo '</div>';
 
-// echo get_search_form();
 
-echo '</div>';
-
-echo '<div class="col-lg-3 col-md-2 col-3 desktop-hidden">';
-echo '<a id="navToggle" class="nav-toggle">';
+echo '<div>';
+echo '<a id="mobileMenuToggle" class="openModalBtn nav-toggle" data-modal-id="mobileMenu" title="mobile menu nav toggle">';
 echo '<div>';
 echo '<div class="line-1 bg-accent"></div>';
 echo '<div class="line-2 bg-accent"></div>';
@@ -102,25 +99,96 @@ echo '</div>';
 echo '</a>';
 echo '</div>';
 
-echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
-echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-accent desktop-hidden" id="navItems">';
+// echo get_search_form();
 
-echo '<div class="pt-5 pb-5">';
-echo '<div class="close-menu">';
-echo '<div>';
-echo '<span id="navMenuClose" class="close h2 text-white" style="float:right;">X</span>';
 echo '</div>';
-echo '</div>';
-echo '<a href="' . home_url() . '">';
+
+// echo '<div class="col-lg-3 col-md-2 col-3 desktop-hidden">';
+// echo '<a id="navToggle" class="nav-toggle">';
+// echo '<div>';
+// echo '<div class="line-1 bg-accent"></div>';
+// echo '<div class="line-2 bg-accent"></div>';
+// echo '<div class="line-3 bg-accent"></div>';
+// echo '</div>';
+// echo '</a>';
+// echo '</div>';
+
+// echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
+// echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-accent desktop-hidden" id="navItems">';
+
+// echo '<div class="pt-5 pb-5">';
+// echo '<div class="close-menu">';
+// echo '<div>';
+// echo '<span id="navMenuClose" class="close h2 text-white" style="float:right;">X</span>';
+// echo '</div>';
+// echo '</div>';
+// echo '<a href="' . home_url() . '">';
+// echo logoSVG();
+// echo '</a>';
+// echo '</div>';
+// wp_nav_menu(array(
+// 'menu' => 'primary',
+// 'menu_class'=>'menu list-unstyled mb-0'
+// )); 
+// echo '</div>'; // end of col for navigation
+
+// <!-- The first Modal -->
+echo '<div id="mobileMenu" class="modal mobile-menu">';
+//   <!-- Modal content -->
+echo '<div class="modal-content-menu modal-content">';
+echo '<span class="close" id="navMenuClose">&times;</span>';
+
+// echo do_shortcode('[spacer style="height:25px;"]');
+
+echo '<div style="width:100%;max-width:105px;">';
+echo '<a href="' . home_url() . '" title="Your Paint Guy Handyman in Merrimack & Southern Hampshire">';
+// echo wp_get_attachment_image(logoImg()['id'],'full','',[
+//     'class'=>'w-100 h-auto',
+// ]);
 echo logoSVG();
 echo '</a>';
 echo '</div>';
-wp_nav_menu(array(
-'menu' => 'primary',
-'menu_class'=>'menu list-unstyled mb-0'
-)); 
-echo '</div>'; // end of col for navigation
 
+wp_nav_menu(array(
+    'menu' => 'primary',
+    'menu_class'=>'menu list-unstyled mb-0'
+));
+
+// echo '<div class="d-flex align-items-center justify-content-start" style="">';
+
+// echo '<div style="border-radius:50%;height:40px;min-width:40px;margin-right:10px;" class="bg-white d-flex align-items-center justify-content-center">';
+// echo '<svg style="height:20px;" fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>';
+// echo '</div>';
+
+// echo '<div>';
+// echo '<p class="text-gray" style="margin:0;"><strong>Email</strong></p>';
+// echo '<a href="mailto:' . emailAddress() . '" target="_blank" class="text-accent-secondary" title="email link">' . emailAddress() . '</a>';
+// echo '</div>';
+
+// echo '</div>';
+
+// echo do_shortcode('[spacer style="height:25px;"]');
+
+// echo '<div class="d-flex align-items-center justify-content-start" style="">';
+
+// echo '<div style="border-radius:50%;height:40px;min-width:40px;margin-right:10px;" class="bg-white d-flex align-items-center justify-content-center">';
+// echo '<svg style="height:20px;" fill="var(--accent-primary)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>';
+// echo '</div>';
+
+// echo '<div>';
+// echo '<p class="text-gray" style="margin:0;"><strong>Address</strong></p>';
+// echo '<span style="line-height:1;display:inline-block;">' . address() . '</span>';
+// echo '</div>';
+
+// echo '</div>';
+
+echo do_shortcode('[spacer style="height:25px;"]');
+
+echo do_shortcode('[button href="tel:+1' . globalPhone() . '" title="phone number to call Jay"]Call Mark[/button]');
+
+echo '</div>';
+echo '</div>';
+// end of mobile nav menu
 
 
 echo '</div>';

@@ -70,7 +70,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			testimonials: [
 				...testimonials,
 				{
-					col_class: 'col-md-6',
+					col_class: '',
 					col_style: '',
 					col_id: '',
 					title: '',

@@ -69,10 +69,10 @@ window.addEventListener("scroll", parallaxEffect);
 function parallaxEffect() {
     if (scrollY < 299 || scrollY === 0) {
         logoMain.style.width = "100%"
-        console.log(scrollY);
+        // console.log(scrollY);
     } else if (scrollY > 300) {
         logoMain.style.width = "75%"
-        console.log(scrollY);
+        // console.log(scrollY);
     }
     setTimeout( function() {
         blankSpace.style.height = (((header.offsetHeight) - 1) + "px");

@@ -163,16 +163,22 @@ blockquote {
     font-size: 2.25rem;
   }
   h3, .h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   h4, .h4 {
-    font-size: 1.75rem;
+    font-size: 1.45rem;
   }
   h5,.h5{
-    font-size:1.5rem;
+    font-size:1.35rem;
   }
   .lead,h6,.h6{
     font-size:1.25rem;
+  }
+}
+
+@media only screen and (min-width:992px){
+  .column-count-two {
+    column-count:2;
   }
 }
 
