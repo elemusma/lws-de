@@ -24,7 +24,7 @@ if ( have_posts() ) :
     }
     $counterBlog++;
     
-echo '<div class="col-lg-4 col-md-6 col-12 pr-lg-5 col-blog bg-light" style="margin-bottom: 50px;" data-aos="fade-up" data-aos-delay="' . $counterBlog . '00">';
+echo '<div class="col-md-6 col-12 pr-lg-5 col-blog bg-light" style="margin-bottom: 50px;" data-aos="fade-up" data-aos-delay="' . $counterBlog . '00">';
 
     
     echo '<div class="w-100 h-100 box-shadow blog-content position-relative overflow-h" style="border-radius:8px;">';

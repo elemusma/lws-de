@@ -91,9 +91,9 @@ for (i = 0; i < menuItems.length; i++) {
 }
 // ###################################################
 
-navMenuClose.addEventListener('click', closeMenu);
-navMenuOverlay.addEventListener('click', closeMenu);
-navMenuToggle.addEventListener('click', openMenu);
+// navMenuClose.addEventListener('click', closeMenu);
+// navMenuOverlay.addEventListener('click', closeMenu);
+// navMenuToggle.addEventListener('click', openMenu);
 
 function openMenu() {
     setTimeout(function () {

@@ -1,5 +1,7 @@
-footer ul.menu li {
-    padding: 0;
+footer ul.menu li, 
+footer ul.menu>li>a {
+    padding: 10px 0px;
+    color:white;
 }
 
 #servicesMenuModal ul.menu>li>a {
