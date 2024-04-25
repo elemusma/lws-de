@@ -75,6 +75,8 @@ export default function Edit( { attributes, setAttributes } ) {
 					col_id: '',
 					inner_col_style: '',
 					inner_col_class: '',
+					data_aos: 'fade-up',
+					data_aos_delay:'',
 					img: '',
 					img_class: 'w-100',
 					img_style: '',
@@ -347,6 +349,40 @@ export default function Edit( { attributes, setAttributes } ) {
 										updateColumn(
 											index,
 											'inner_col_class',
+											content.target.value
+										)
+									}
+								/>
+								
+								</div>
+								</div>
+								<div style={{display:'flex'}}>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>Data AOS</p>
+								<input
+									type="text"
+									style={{width:'300px'}}
+									value={ column.data_aos }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'data_aos',
+											content.target.value
+										)
+									}
+								/>
+								
+								</div>
+								<div>
+								<p style={ { marginBottom: '0px' } }>Data AOS Delay</p>
+								<input
+									type="text"
+									style={{width:'300px'}}
+									value={ column.data_aos_delay }
+									onChange={ ( content ) =>
+										updateColumn(
+											index,
+											'data_aos_delay',
 											content.target.value
 										)
 									}

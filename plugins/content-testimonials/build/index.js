@@ -85,6 +85,8 @@ function Edit({
         col_class: '',
         col_style: '',
         col_id: '',
+        data_aos: 'fade-up',
+        data_aos_delay: '',
         title: '',
         content: '',
         code_block: ''
@@ -279,6 +281,34 @@ function Edit({
       onChange: content => updateTestimonial(index, 'col_id', content.target.value)
     }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       style: {
+        display: 'flex'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      value: testimonial.data_aos,
+      onChange: content => updateTestimonial(index, 'data_aos', content.target.value)
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS Delay"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      value: testimonial.data_aos_delay,
+      onChange: content => updateTestimonial(index, 'data_aos_delay', content.target.value)
+    }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
         display: 'flex',
         paddingTop: '25px'
       }
@@ -311,6 +341,8 @@ function Edit({
           col_class: '',
           col_style: '',
           col_id: '',
+          data_aos: 'fade-up',
+          data_aos_delay: '',
           title: 'new column',
           content: 'new column content'
         };
@@ -455,7 +487,9 @@ function save({
       className: `position-relative text-center ${testimonial.col_class}`,
       style: `${testimonial.col_style}`
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: ``
+      className: ``,
+      "data-aos": testimonial.data_aos,
+      "data-aos-delay": testimonial.data_aos_delay
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: ``
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
@@ -464,14 +498,14 @@ function save({
       }
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
       value: testimonial.content
-    })))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
       className: `bold`,
       style: {
         cursor: 'pointer'
       }
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
       value: testimonial.title
-    })));
+    }))));
   })))));
 }
 
@@ -567,7 +601,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-testimonials","version":"0.1.0","title":"Content Testimonials","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center testimonial-carousel owl-carousel owl-theme"},"row_id":{"type":"string","default":""},"testimonials":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","name":"","content":""}]}},"textdomain":"content-testimonials","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-testimonials","version":"0.1.0","title":"Content Testimonials","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center testimonial-carousel owl-carousel owl-theme"},"row_id":{"type":"string","default":""},"testimonials":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","data_aos":"","data_aos_delay":"","name":"","content":""}]}},"textdomain":"content-testimonials","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

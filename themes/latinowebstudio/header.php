@@ -17,7 +17,7 @@ body_class();
 echo '>';
 echo codeBody();
 
-echo '<div class="blank-space"></div>';
+echo '<div class="blank-space" style="transition:all 1s ease-in-out;"></div>';
 echo '<header class="position-relative box-shadow bg-accent-secondary w-100" style="top:0;left:0;z-index:10;">';
 
 echo '<div class="nav">';
@@ -139,16 +139,16 @@ echo '</div>';
 
 echo '</header>';
 
-echo '<section class="hero position-relative">';
+// echo '<section class="hero position-relative">';
 // $globalPlaceholderImg = get_field('global_placeholder_image','options');
-if(is_page()){
-if(has_post_thumbnail()){
-    the_post_thumbnail('full', array(
-        'class' => 'w-100 h-100 bg-img position-absolute'
-    ));
-} 
+// if(is_page()){
+// if(has_post_thumbnail()){
+//     the_post_thumbnail('full', array(
+//         'class' => 'w-100 h-100 bg-img position-absolute'
+//     ));
+// } 
 
-}
+// }
 
 
 // if(is_front_page()) {
@@ -195,5 +195,5 @@ if(has_post_thumbnail()){
 // echo '</div>';
 // }
 
-echo '</section>';
+// echo '</section>';
 ?>

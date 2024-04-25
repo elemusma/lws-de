@@ -85,6 +85,8 @@ function Edit({
         col_class: 'col-md-6 d-flex align-items-stretch',
         col_style: '',
         col_id: '',
+        data_aos: 'fade-up',
+        data_aos_delay: '',
         title: '',
         content: '',
         code_block: ''
@@ -279,6 +281,34 @@ function Edit({
       onChange: content => updateFAQ(index, 'col_id', content.target.value)
     }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       style: {
+        display: 'flex'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      value: faq.data_aos,
+      onChange: content => updateFAQ(index, 'data_aos', content.target.value)
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS Delay"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      value: faq.data_aos_delay,
+      onChange: content => updateFAQ(index, 'data_aos_delay', content.target.value)
+    }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
         display: 'flex',
         paddingTop: '25px'
       }
@@ -311,6 +341,8 @@ function Edit({
           col_class: '',
           col_style: '',
           col_id: '',
+          data_aos: 'fade-up',
+          data_aos_delay: '',
           title: 'new column',
           content: 'new column content'
         };
@@ -453,7 +485,9 @@ function save({
   }, attributes.faqs.map((faq, index) => {
     return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: `accordion position-relative ${faq.col_class}`,
-      style: `border-bottom:1px solid #D5D8DC;${faq.col_style}`
+      style: `border-bottom:1px solid #D5D8DC;${faq.col_style}`,
+      "data-aos": faq.data_aos,
+      "data-aos-delay": faq.data_aos_delay
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "position-absolute chevron",
       style: {}
@@ -590,7 +624,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-faqs","version":"0.1.0","title":"Content Faqs","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center accordions"},"row_id":{"type":"string","default":""},"faqs":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","title":"","content":""}]}},"textdomain":"content-faqs","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/content-faqs","version":"0.1.0","title":"Content Faqs","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center accordions"},"row_id":{"type":"string","default":""},"faqs":{"type":"array","items":{"type":"object"},"default":[{"col_class":"","col_style":"","col_id":"","data_aos":"","data_aos_delay":"","title":"","content":""}]}},"textdomain":"content-faqs","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

@@ -95,7 +95,7 @@ echo '</section>';
 // echo '</div>';
 // echo '</div>';
 // echo '</section>';
-echo '<div class="text-center bg-light" style="padding:15px 25px;">';
+echo '<div class="text-center bg-light" style="padding:15px 45px;">';
     echo '<div class="d-flex justify-content-center align-items-center">';
         echo '<small class=""><a href="https://latinowebstudio.com/" target="_blank" rel="noopener noreferrer" title="Web Design, Web Development & SEO done by Latino Web Studio in Denver, CO" style="" class="">Web Design, Web Development & SEO in Denver, CO</a> done by Latino Web Studio</small>';
     echo '</div>';

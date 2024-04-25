@@ -87,6 +87,8 @@ function Edit({
         col_id: '',
         inner_col_style: '',
         inner_col_class: '',
+        data_aos: 'fade-up',
+        data_aos_delay: '',
         img: '',
         img_class: 'w-100',
         img_style: '',
@@ -312,6 +314,36 @@ function Edit({
       },
       value: column.inner_col_class,
       onChange: content => updateColumn(index, 'inner_col_class', content.target.value)
+    }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        display: 'flex'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+      style: {
+        paddingRight: '25px'
+      }
+    }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      style: {
+        width: '300px'
+      },
+      value: column.data_aos,
+      onChange: content => updateColumn(index, 'data_aos', content.target.value)
+    })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+      style: {
+        marginBottom: '0px'
+      }
+    }, "Data AOS Delay"), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("input", {
+      type: "text",
+      style: {
+        width: '300px'
+      },
+      value: column.data_aos_delay,
+      onChange: content => updateColumn(index, 'data_aos_delay', content.target.value)
     }))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       style: {
         display: 'flex',
@@ -556,7 +588,9 @@ function save({
       style: column.col_style
     }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: `${column.inner_col_class}`,
-      style: `${column.inner_col_style}`
+      style: `${column.inner_col_style}`,
+      "data-aos": column.data_aos,
+      "data-aos-delay": column.data_aos_delay
     }, column.img && (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       src: column.img,
       alt: column.title,
@@ -666,7 +700,7 @@ module.exports = window["wp"]["i18n"];
   \************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/boxes-title-content","version":"0.1.0","title":"Boxes Title Content","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center"},"row_id":{"type":"string","default":""},"col_left_style":{"type":"string","default":""},"col_left_class":{"type":"string","default":"col-lg-6 text-center"},"col_left_id":{"type":"string","default":""},"col_left_icon":{"type":"string","default":""},"col_left_title":{"type":"string","default":""},"col_left_description":{"type":"string","default":""},"col_right_style":{"type":"string","default":""},"col_right_class":{"type":"string","default":"col-lg-6 text-center"},"col_right_id":{"type":"string","default":""},"col_right_icon":{"type":"string","default":""},"col_right_title":{"type":"string","default":""},"col_right_description":{"type":"string","default":""},"columns":{"type":"array","items":{"type":"object"},"default":[{"col_class":"col-md-6","col_style":"","col_id":"","inner_col_style":"","inner_col_class":"","img":"","img_class":"","img_style":"","title":"Column","content":"This is the column content.","code_block":""}]}},"textdomain":"boxes-title-content","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/boxes-title-content","version":"0.1.0","title":"Boxes Title Content","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"attributes":{"section_style":{"type":"string","default":""},"section_class":{"type":"string","default":""},"section_id":{"type":"string","default":""},"section_image":{"type":"string","default":null},"section_image_class":{"type":"string"},"section_image_style":{"type":"string"},"section_block":{"type":"string","default":""},"container_style":{"type":"string","default":""},"container_class":{"type":"string","default":"container"},"container_id":{"type":"string","default":""},"row_style":{"type":"string","default":""},"row_class":{"type":"string","default":"row justify-content-center"},"row_id":{"type":"string","default":""},"col_left_style":{"type":"string","default":""},"col_left_class":{"type":"string","default":"col-lg-6 text-center"},"col_left_id":{"type":"string","default":""},"col_left_icon":{"type":"string","default":""},"col_left_title":{"type":"string","default":""},"col_left_description":{"type":"string","default":""},"col_right_style":{"type":"string","default":""},"col_right_class":{"type":"string","default":"col-lg-6 text-center"},"col_right_id":{"type":"string","default":""},"col_right_icon":{"type":"string","default":""},"col_right_title":{"type":"string","default":""},"col_right_description":{"type":"string","default":""},"columns":{"type":"array","items":{"type":"object"},"default":[{"col_class":"col-md-6","col_style":"","col_id":"","inner_col_style":"","inner_col_class":"","data_aos":"","data_aos_delay":"","img":"","img_class":"","img_style":"","title":"Column","content":"This is the column content.","code_block":""}]}},"textdomain":"boxes-title-content","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ })
 

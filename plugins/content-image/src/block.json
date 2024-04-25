@@ -74,6 +74,14 @@
 			"type": "string",
 			"default": ""
 		},
+		"col_data_aos": {
+			"type": "string",
+			"default": "fade-up"
+		},
+		"col_data_aos_delay": {
+			"type": "string",
+			"default": ""
+		},
 		"col_image": {
 			"type": "string",
 			"default": ""
@@ -89,6 +97,14 @@
 		"col_image_id": {
 			"type": "string",
 			"default": ""
+		},
+		"col_image_data_aos": {
+			"type": "string",
+			"default": "fade-up"
+		},
+		"col_image_data_aos_delay": {
+			"type": "string",
+			"default": "200"
 		},
 		"image_style": {
 			"type": "string",

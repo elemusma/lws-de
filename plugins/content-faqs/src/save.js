@@ -52,7 +52,7 @@ export default function save( { attributes } ) {
 {
   attributes.faqs.map((faq, index) => {
     return (
-        <div className={`accordion position-relative ${faq.col_class}`} style={`border-bottom:1px solid #D5D8DC;${faq.col_style}`}>
+        <div className={`accordion position-relative ${faq.col_class}`} style={`border-bottom:1px solid #D5D8DC;${faq.col_style}`} data-aos={faq.data_aos} data-aos-delay={faq.data_aos_delay}>
 		<div className='position-absolute chevron' style={{}}>
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.38 321.74">
   <defs>

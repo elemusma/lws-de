@@ -56,7 +56,7 @@ export default function save( { attributes } ) {
 								>
 									<div
 										className={ `${ column.inner_col_class }` }
-										style={ `${ column.inner_col_style }` }
+										style={ `${ column.inner_col_style }` } data-aos={column.data_aos} data-aos-delay={column.data_aos_delay}
 									>
 										{ column.img && (
 											<img

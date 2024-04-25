@@ -30,10 +30,10 @@ export default function save({attributes}) {
 
 			<div className={attributes.container_class} style={attributes.container_style} id={attributes.container_id}>
 				<div className={attributes.row_class} style={attributes.row_style} id={attributes.row_id}>
-					<div className={attributes.col_class} style={attributes.col_style} id={attributes.col_id} data-aos="fade-up">
+					<div className={attributes.col_class} style={attributes.col_style} id={attributes.col_id} data-aos={attributes.col_data_aos} data-aos-delay={attributes.col_data_aos_delay}>
 					<InnerBlocks.Content />
 					</div>
-					<div className={attributes.col_image_class} style={attributes.col_image_style} id={attributes.col_image_id} data-aos="fade-up">
+					<div className={attributes.col_image_class} style={attributes.col_image_style} id={attributes.col_image_id} data-aos={attributes.col_image_data_aos} data-aos-delay={attributes.col_image_data_aos_delay}>
 					{attributes.col_image && (
 			<img src={attributes.col_image} alt="" className={`${attributes.image_class}`} style={`width:100%;height:auto;${attributes.image_style}`} id={attributes.image_id} />
 		)}

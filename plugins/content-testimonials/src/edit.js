@@ -73,6 +73,8 @@ export default function Edit( { attributes, setAttributes } ) {
 					col_class: '',
 					col_style: '',
 					col_id: '',
+					data_aos: 'fade-up',
+					data_aos_delay: '',
 					title: '',
 					content: '',
 					code_block: ''
@@ -310,6 +312,40 @@ export default function Edit( { attributes, setAttributes } ) {
 								/>
 								</div>
 								</div>
+								<div style={{display:'flex'}}>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>
+									Data AOS
+								</p>
+								<input
+									type="text"
+									value={ testimonial.data_aos }
+									onChange={ ( content ) =>
+										updateTestimonial(
+											index,
+											'data_aos',
+											content.target.value
+										)
+									}
+								/>
+								</div>
+								<div style={{paddingRight:'25px'}}>
+								<p style={ { marginBottom: '0px' } }>
+									Data AOS Delay
+								</p>
+								<input
+									type="text"
+									value={ testimonial.data_aos_delay }
+									onChange={ ( content ) =>
+										updateTestimonial(
+											index,
+											'data_aos_delay',
+											content.target.value
+										)
+									}
+								/>
+								</div>
+								</div>
 								<div
 									style={ {
 										display: 'flex',
@@ -351,6 +387,8 @@ export default function Edit( { attributes, setAttributes } ) {
             col_class: '',
             col_style: '',
             col_id: '',
+			data_aos: 'fade-up',
+			data_aos_delay: '',
             title: 'new column',
             content: 'new column content',
         };

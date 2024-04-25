@@ -54,12 +54,12 @@ export default function save( { attributes } ) {
     return (
         <div className={`position-relative text-center ${testimonial.col_class}`} style={`${testimonial.col_style}`}>
           
-          <div className={``}>
+          <div className={``} data-aos={testimonial.data_aos} data-aos-delay={testimonial.data_aos_delay}>
             <div className={``}>
               <p style={{ margin: '0px' }}><RichText.Content value={testimonial.content} /></p>
             </div>
-          </div>
 		  <p className={`bold`} style={{ cursor: 'pointer' }}><RichText.Content value={testimonial.title} /></p>
+          </div>
         </div>
     );
   })
