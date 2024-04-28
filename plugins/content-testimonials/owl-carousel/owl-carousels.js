@@ -7,8 +7,8 @@ $('.testimonial-carousel').owlCarousel({
     // autoHeight: false,
     // autoHeightClass: 'owl-height',
     // stagePadding:170,
-    autoplay: false,
-    autoplayTimeout: 3000,
+    autoplay: true,
+    autoplayTimeout: 3500,
     autoplaySpeed: 2000, // this seems to make it autoscroll
     autoplayHoverPause: false,
     animateIn: 'fadeIn',

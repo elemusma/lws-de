@@ -16,6 +16,7 @@
 .btn-main:hover {
     background: var(--accent-primary-hover);
     border-color:var(--accent-primary-hover);
+    color:white !important;
     text-decoration: none;
 }
 
