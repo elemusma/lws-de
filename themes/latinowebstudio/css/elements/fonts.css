@@ -179,6 +179,7 @@ blockquote {
 @media only screen and (min-width:992px){
   .column-count-two {
     column-count:2;
+    column-gap: 100px;
   }
 }
 
