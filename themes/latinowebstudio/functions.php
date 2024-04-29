@@ -344,16 +344,16 @@ function txt_type_shortcode( $atts ) {
 add_shortcode( 'txt_type', 'txt_type_shortcode' );
 
 
-function custom_modify_block_output($block_content, $block) {
-// Check if it's the core/paragraph, core/image, or core/columns block
-if (in_array($block['blockName'], array('core/image', 'core/columns', 'core/quote'))) {
-	// Modify the block content as needed
-	$block_content = '<section class=""><div class="container"><div class="row"><div class="col-12">' . $block_content . '</div></div></div></section>';
-}
-return $block_content;
-}
+// function custom_modify_block_output($block_content, $block) {
+// // Check if it's the core/paragraph, core/image, or core/columns block
+// if (in_array($block['blockName'], array('core/image', 'core/columns', 'core/quote'))) {
+// 	// Modify the block content as needed
+// 	$block_content = '<section class=""><div class="container"><div class="row"><div class="col-12">' . $block_content . '</div></div></div></section>';
+// }
+// return $block_content;
+// }
 
-add_filter('render_block', 'custom_modify_block_output', 10, 2);
+// add_filter('render_block', 'custom_modify_block_output', 10, 2);
 
 // function custom_modify_block_output($block_content, $block) {
 //     global $post;
@@ -601,19 +601,29 @@ add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mime
   add_action( 'admin_head', 'fix_svg' );
 
 
-function custom_search_form($form) {
-    $form = '<form role="search" method="get" class="search-form position-relative" style="min-width:250px;" action="' . esc_url(home_url('/')) . '">
-                <label style="margin-top:0px;">
-                    <span class="screen-reader-text">' . __('Search for:', 'textdomain') . '</span>
-                    <input type="search" style="padding:15px;min-width:250px;border-radius:4px;" class="search-field" placeholder="' . esc_attr__('Search for a product here...', 'textdomain') . '" value="' . get_search_query() . '" name="s" />
-                </label>
-                <button type="submit" class="search-submit bg-accent-secondary d-flex justify-content-center align-items-center position-absolute" style="background:var(--accent-secondary);width:35px;top:5px;right:5px;border-radius:4px;">';
-	$form .= '<div class="" style="width:20px;">';
-	$form .= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>';
-	$form .= '</div>';
+// function custom_search_form($form) {
+//     $form = '<form role="search" method="get" class="search-form position-relative" style="min-width:250px;" action="' . esc_url(home_url('/')) . '">
+//                 <label style="margin-top:0px;">
+//                     <span class="screen-reader-text">' . __('Search for:', 'textdomain') . '</span>
+//                     <input type="search" style="padding:15px;min-width:250px;border-radius:4px;" class="search-field" placeholder="' . esc_attr__('Search for a product here...', 'textdomain') . '" value="' . get_search_query() . '" name="s" />
+//                 </label>
+//                 <button type="submit" class="search-submit bg-accent-secondary d-flex justify-content-center align-items-center position-absolute" style="background:var(--accent-secondary);width:35px;top:5px;right:5px;border-radius:4px;">';
+// 	$form .= '<div class="" style="width:20px;">';
+// 	$form .= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg>';
+// 	$form .= '</div>';
 				
-				$form .= '</button>';
-            $form .= '</form>';
-    return $form;
+// 				$form .= '</button>';
+//             $form .= '</form>';
+//     return $form;
+// }
+// add_filter('get_search_form', 'custom_search_form');
+
+function set_excerpt_length() {
+    return 20;  // Sets the automatic excerpt length to 40 words
 }
-add_filter('get_search_form', 'custom_search_form');
+add_filter('excerpt_length', 'set_excerpt_length');
+
+function new_excerpt_more($more) {
+    return '...';  // Change to whatever you want the 'read more' text to be.
+}
+add_filter('excerpt_more', 'new_excerpt_more');

@@ -25,13 +25,13 @@ echo '<div class="row justify-content-center">';
 echo '<div class="col-lg-9 col-md-12 order-1">';
 
 
-echo '<h1 class="h4 text-center" style="padding-bottom:1rem;line-height:1.5;">' . get_the_title() . '</h1>';
+echo '<h1 class="h4 text-center" style="margin-bottom:0;line-height:1.5;">' . get_the_title() . '</h1>';
 echo '<p class="text-center" style="margin:0px;">' . get_the_time('F jS, Y') . '</p>';
 
-echo get_the_post_thumbnail(null, 'full', array(
-    'class' => 'w-100 h-auto',
-    'style' => ''
-));
+// echo get_the_post_thumbnail(null, 'full', array(
+//     'class' => 'w-100 h-auto',
+//     'style' => ''
+// ));
 
 if ( have_posts() ) : while ( have_posts() ) : the_post();
 the_content();

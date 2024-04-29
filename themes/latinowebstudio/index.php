@@ -24,34 +24,36 @@ if ( have_posts() ) :
     }
     $counterBlog++;
     
-echo '<div class="col-md-6 col-12 pr-lg-5 col-blog bg-light" style="margin-bottom: 50px;" data-aos="fade-up" data-aos-delay="' . $counterBlog . '00">';
+echo '<div class="col-md-6 col-12" style="margin-bottom: 50px;" data-aos="fade-up" data-aos-delay="' . $counterBlog . '00">';
 
     
-    echo '<div class="w-100 h-100 box-shadow blog-content position-relative overflow-h" style="border-radius:8px;">';
+    echo '<div class="w-100 h-100 blog-content position-relative overflow-h" style="">';
     echo '<div class="img-hover overflow-h">';
     echo '<a href="' . get_the_permalink() . '" style="text-decoration:none;" title="Read more for article ' . get_the_title() . '">';
     the_post_thumbnail('full',array(
       'class'=>'w-100 d-block',
-      'style'=>'height:210px;object-fit:cover;object-position:top;'
+      'style'=>'height:350px;object-fit:cover;object-position:top;'
     ));
     echo '</a>';
     echo '</div>';
 // echo '<div>';
 
   // echo '<div class="overlay position-absolute"></div>';
-  echo '<div class="position-relative z-1 bg-light" style="padding:25px;padding-bottom:100px;">';
+  echo '<div class="position-relative z-1" style="padding:25px 0px;">';
   echo '<a href="' . get_the_permalink() . '" style="text-decoration:none;" title="Read more for article ' . get_the_title() . '">';
-  echo '<h3 class="h5" style="line-height:1.5;">' . get_the_title() . '</h3>';
+  echo '<h3 class="h5 text-black bold" style="line-height:1.5;">' . get_the_title() . '</h3>';
 echo '</a>';
 
-  echo '<hr class="border-white">';
+  // echo '<hr class="border-white">';
 
 
-  echo '<p class="">' . get_the_tags('Tags: ') . '</p>';
+  // echo '<p class="">' . get_the_tags('Tags: ') . '</p>';
   // echo do_shortcode('[button]Read More[/button]');
+
+  echo get_the_excerpt();
   echo '</div>';
 
-  echo '<a href="' . get_the_permalink() . '" title="Read more for article ' . get_the_title() . '" class="position-absolute z-3" style="color:var(--accent-secondary);bottom:25px;left:26px;">Read More</a>';
+  echo '<a href="' . get_the_permalink() . '" title="Read more for article ' . get_the_title() . '" class="z-3 bold" style="color:var(--accent-secondary);">Read More</a>';
 
 
 
