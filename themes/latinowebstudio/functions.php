@@ -566,6 +566,24 @@ function expertWitness() {
     return $options['expert-witness-blurb'];
 }
 
+function chevronRight() {
+	return '<svg style="width:15px;height:10px;" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416.03 448.15">
+	<defs>
+	  <style>
+		.cls-1 {
+		  stroke-width: 0px;
+		}
+	  </style>
+	</defs>
+	<g id="Layer_1-2" data-name="Layer 1">
+	  <g>
+		<path class="cls-1" d="M406.65,201.47c12.5,12.5,12.5,32.8,0,45.3l-192,192c-12.5,12.5-32.8,12.5-45.3,0s-12.5-32.8,0-45.3l169.4-169.4L169.45,54.67c-12.5-12.5-12.5-32.8,0-45.3s32.8-12.5,45.3,0l192,192-.1.1Z"/>
+		<path class="cls-1" d="M246.68,201.47c12.5,12.5,12.5,32.8,0,45.3L54.68,438.77c-12.5,12.5-32.8,12.5-45.3,0s-12.5-32.8,0-45.3l169.4-169.4L9.47,54.67C-3.03,42.17-3.03,21.88,9.47,9.38s32.8-12.5,45.3,0l192,192-.1.1Z"/>
+	  </g>
+	</g>
+  </svg>';
+}
+
 // Allow SVG
 add_filter( 'wp_check_filetype_and_ext', function($data, $file, $filename, $mimes) {
 

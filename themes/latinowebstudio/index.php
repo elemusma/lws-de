@@ -2,17 +2,18 @@
 
 get_header();
 
-echo '<section class="body" style="padding:50px 0px;">';
-echo '<div class="container">';
-echo '<div class="row">';
 
-echo '<div class="col-12" style="padding-top:25px;padding-bottom:25px;">';
+echo '<div class="col-12 text-center text-white" style="padding-top:25px;padding-bottom:25px;background:#1E2D34;">';
 $posts_page_id = get_option( 'page_for_posts' );
 $posts_page_title = get_the_title( $posts_page_id );
 
 echo '<h1>' . $posts_page_title . '</h1>';
 
 echo '</div>';
+
+echo '<section class="body" style="padding:50px 0px;">';
+echo '<div class="container">';
+echo '<div class="row">';
 
 if ( have_posts() ) : 
     
@@ -53,7 +54,7 @@ echo '</a>';
   echo get_the_excerpt();
   echo '</div>';
 
-  echo '<a href="' . get_the_permalink() . '" title="Read more for article ' . get_the_title() . '" class="z-3 bold" style="color:var(--accent-secondary);">Read More</a>';
+  echo '<a href="' . get_the_permalink() . '" title="Read more for article ' . get_the_title() . '" class="z-3 bold" style="color:var(--accent-secondary);">Read More ' . chevronRight() . '</a>';
 
 
 
