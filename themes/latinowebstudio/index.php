@@ -20,7 +20,7 @@ if ( have_posts() ) :
     $counterBlog = 0;
     while ( have_posts() ) : the_post();
     
-    if($counterBlog > 2) {
+    if($counterBlog > 1) {
       $counterBlog = 0;
     }
     $counterBlog++;

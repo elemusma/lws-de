@@ -80,15 +80,6 @@ ul.menu>li.current-menu-item>a,ul.menu>li>a:hover,
     color: var(--accent-primary) !important;
 }
 
-.free-gift a {
-    font-weight: 400 !important;
-}
-
-.nav .shopping-cart.menu svg {
-    fill: white;
-    height: 15px;
-}
-
 @media screen and (max-width:1199px) {
     .nav ul.menu {
         display: block !important;
@@ -226,15 +217,3 @@ ul.sub-menu li a:hover {
         color: white;
     }
 }
-
-/* for blog and other pages */
-.page-template-blog header#header,
-.single header#header,
-.archive header#header,
-.category header#header,
-.tag header#header,
-.search header#header {
-    background: #f3be7c;
-}
-
-/* website specific css */

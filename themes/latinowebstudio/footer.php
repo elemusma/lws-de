@@ -6,7 +6,7 @@ echo '<div class="container">';
 echo '<div class="row justify-content-center">';
 
 echo '<div class="col-lg-9 text-center" style="">';
-echo do_shortcode('[button href="tel:+1' . globalPhone() . '" class="white"]' . globalPhone() . '[/button]');
+echo do_shortcode('[button href="tel:+1' . globalPhone() . '" class="white"]Speak with an Expert[/button]');
 echo do_shortcode('[button href="/wp-content/uploads/2024/04/Mark-McFarland-CV-Not-Retained.pdf" target="_blank" class="white"]CV Download[/button]');
 echo do_shortcode('[button href="/contact/" class="white"]Contact Now[/button]');
 echo '</div>';
@@ -18,7 +18,7 @@ echo '<hr style="margin:40px auto !important;border-color:#f7f7f7;">';
 echo '<div class="container">';
 echo '<div class="row">';
 
-echo '<div class="col-lg-4 col-md-6 text-white">';
+echo '<div class="col-lg-5 col-md-6 text-white">';
 echo '<a href="' . home_url() . '">';
 echo '<div style="width:205px;fill:white;">';
 echo logoSVG();
@@ -28,47 +28,26 @@ echo '</a>';
 echo '<p class="">' . companyAbout() . '</p>';
 
 echo '</div>';
-echo '<div class="col-lg-4 col-md-6 text-white">';
-echo '<p><strong>Forensic Electrical, Telecom, &amp; Wireless Engineering</strong></p>';
+echo '<div class="col-lg-3 col-md-6 text-white">';
+echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
 
-wp_nav_menu(array(
-    'menu' => 'Forensic Electrical, Telecom, & Wireless Engineering',
-    'menu_class'=>'menu list-unstyled mb-0'
-));
-// echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
+echo expertWitness();
 
-// echo '<small class="">' . expertWitness() . '</small>';
-
-echo '</div>';
-echo '<div class="col-lg-4 col-md-6 text-white">';
-echo '<p><strong>Applied Research &amp; Analytics</strong></p>';
-
-wp_nav_menu(array(
-    'menu' => 'Applied Research & Analytics',
-    'menu_class'=>'menu list-unstyled mb-0'
-));
-// echo '<p><strong>Expert Witness And Analytic Services</strong></p>';
-
-// echo '<small class="">' . expertWitness() . '</small>';
-
-echo '</div>';
-
-// // echo '<div class="col-lg-3 text-white">';
-// // echo '<strong>About</strong>';
-// // echo '<p class="">' . companyAbout() . '</p>';
-
-// // echo '</div>';
-// echo '<div class="col-lg-3 text-white">';
-// echo '<p><strong>Client Resources</strong></p>';
-// echo '<p>';
 // wp_nav_menu(array(
-//     'menu' => 'footer',
-//     'menu_class'=>'menu list-unstyled text-white text-uppercase mt-0'
+//     'menu' => 'Forensic Electrical, Telecom, & Wireless Engineering',
+//     'menu_class'=>'menu list-unstyled mb-0'
 // ));
-// echo '</p>';
 
+echo '</div>';
+echo '<div class="col-lg-3 col-md-6 text-white">';
+echo '<p><strong>Client Resources</strong></p>';
 
-// echo '</div>';
+wp_nav_menu(array(
+    'menu' => 'footer',
+    'menu_class'=>'menu list-unstyled mb-0'
+));
+
+echo '</div>';
 
 echo '</div>';
 echo '</div>';
@@ -95,11 +74,11 @@ echo '</section>';
 // echo '</div>';
 // echo '</div>';
 // echo '</section>';
-// echo '<div class="text-center bg-light" style="padding:15px 45px;">';
-//     echo '<div class="d-flex justify-content-center align-items-center">';
-//         echo '<small class=""><a href="https://latinowebstudio.com/" target="_blank" rel="noopener noreferrer" title="Web Design, Web Development & SEO done by Latino Web Studio in Denver, CO" style="" class="">Web Design, Web Development & SEO in Denver, CO</a> done by Latino Web Studio</small>';
-//     echo '</div>';
-// echo '</div>';
+echo '<div class="text-center bg-light" style="padding:15px 45px;">';
+    echo '<div class="d-flex justify-content-center align-items-center">';
+        echo '<small class=""><a href="https://latinowebstudio.com/" target="_blank" rel="noopener noreferrer" title="Web Design, Web Development & SEO done by Latino Web Studio in Denver, CO" style="" class="">Web Design, Web Development & SEO in Denver, CO</a> done by Latino Web Studio</small>';
+    echo '</div>';
+echo '</div>';
 
 
 echo '<div id="servicesMenuModal" class="modal" style="opacity:1;">';
@@ -149,6 +128,9 @@ echo logoSVG();
 echo '</a>';
 echo '</div>';
 
+echo do_shortcode('[spacer style="height:45px;"]');
+
+// echo '<a href="/">Home</a>';
 
 // <!-- <div class="accordions"> -->
 echo '<div class="accordion-nav expert-witness">';
