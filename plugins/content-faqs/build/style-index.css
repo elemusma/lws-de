@@ -10,7 +10,7 @@
 .accordion {
   cursor: pointer;
 }
-.accordion a {
+.accordion span {
   font-family: "poppinsbold";
   color: black;
 }

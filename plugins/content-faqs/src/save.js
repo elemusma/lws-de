@@ -70,7 +70,7 @@ export default function save( { attributes } ) {
   </g>
 </svg>
 		</div>
-          <a className={`button`} style={{ cursor: 'pointer' }}>{faq.title}</a>
+          <span className={`button`} style={{ cursor: 'pointer' }}>{faq.title}</span>
           <div className={`accordion-content`}>
             <div className={`accordion-content-inner`}>
               <p style={{ margin: '0px' }}><RichText.Content value={faq.content} /></p>

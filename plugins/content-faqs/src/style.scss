@@ -12,7 +12,7 @@ $apply_bold_font: true; // Define a variable to control whether to apply bold fo
     cursor: pointer;
 
     @if $apply_bold_font {
-        a {
+        span {
             // font-weight: bold;
             font-family: 'poppinsbold';
             color:black;

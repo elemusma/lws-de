@@ -513,7 +513,7 @@ function save({
         strokeWidth: '0px'
       },
       d: "M1,2.34l165.93,158.53L1,319.4V2.34M0,0v321.74l168.38-160.87L0,0h0Z"
-    }))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
+    }))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
       className: `button`,
       style: {
         cursor: 'pointer'
